@@ -22,6 +22,7 @@ add babel which compiles the javascript (next gen javascript)
 
 react returns jsx(almost like html looking)
 
+
 uistate management is needed if you want dynamic elements, want to modify html elements, add and remove elements.
 angular, vue and react do the same thing
 you can build a single page web application and just keep changing the components and not have to go back to the server and re load the page
@@ -29,4 +30,48 @@ for multipage applicaions we call reactdom.render() for every component, where a
 react uses a lot of next gen java script.
 use let(variables like var) and const(constants) instead of var
 const functionName = (variables if any) =>{function body} this is equal to function something(){}
+spread, rest, destructuring.
+by copying an object, you copy the pointer to that object. assigning the
+numbers, strings, booleans are primitive types. assigning one number of string to another would literally copy the first into the second one. reassigning and storing creates another copy
+object is not primitive or copied over, its a reference type. copying and reassigning the initial object does not create another object, it creates a copy of the location to that object.
+to copy the object and just the pointer (can change the object from various sources and lose track of the object)use the spread operator (...) so you can copy the original and make changes to it and not copy the pointer.
+babel- translation from modern to other levels that can get hooked into webpack-, along with webpack to compile next gen on old browsers.
+bundler -webpack helps with putting split files together,
+development server- to test app locally, web server that runs locally
 
+=====
+const numbers = [1,2,3];
+const newNumbers = [...numbers, 4];
+console.log(newNumbers);
+
+const Person ={
+  name: 'Max'
+};
+const newPerson={
+  ...Person,
+  age: '28'
+};
+console.log(newPerson);
+======
+class Human {
+
+gender = 'Male';
+
+  printGender = () => {
+    console.log(this.gender);
+  }
+}
+class Person extends Human {
+
+
+name = 'Max';
+gender = 'Female'
+
+printMyName = () => {
+console.log(this.name);
+}
+}
+const person = new Person();
+person.printMyName();
+person.printGender();
+======
