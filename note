@@ -38,6 +38,7 @@ to copy the object and just the pointer (can change the object from various sour
 babel- translation from modern to other levels that can get hooked into webpack-, along with webpack to compile next gen on old browsers.
 bundler -webpack helps with putting split files together,
 development server- to test app locally, web server that runs locally
+create react app tool to create react app project
 
 =====
 const numbers = [1,2,3];
