@@ -44,6 +44,9 @@ wrap all the tags in one root element (one div) to apply css and return to react
 es6 for modern java script syntax
 app.js is the file where we have one root view and add all components to it. call all components in that jsx.
 all the components live in their own folder and have their own js fiel and define what they want rendered and how. app.js can define the style, sequence and such.
+props are properties for the component. when working on the component.js, you can pass props as a parameter to the function and use the dynamic parts in the app.js when calling the component to pass any value to make the  component reusable and dynamic
+state(property) is a class variable available only when a class extends Component from react library
+
 
 =====
 const numbers = [1,2,3];
