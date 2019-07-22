@@ -39,6 +39,11 @@ babel- translation from modern to other levels that can get hooked into webpack-
 bundler -webpack helps with putting split files together,
 development server- to test app locally, web server that runs locally
 create react app tool to create react app project
+jsx makes writing code in app.js easier with easily managed html like tags and view information. If not, we could use react.createlement to keep adding element information which is not easy to handle and verbose to write.
+wrap all the tags in one root element (one div) to apply css and return to react to render
+es6 for modern java script syntax
+app.js is the file where we have one root view and add all components to it. call all components in that jsx.
+all the components live in their own folder and have their own js fiel and define what they want rendered and how. app.js can define the style, sequence and such.
 
 =====
 const numbers = [1,2,3];
