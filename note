@@ -1,0 +1,86 @@
+Reat native
+
+index.js is the start of the project, first point of entry
+app.js is the file we are trying to render, we update the file and then hit 'cmd R' to reload the ui.
+react native under the hood alex kotliarskyi
+cons-
+pro- not web view, easy to wrap native component
+react native group on fb
+dev menu- cmd d on the app, perf monitor- js frame rate, views-2,
+gpu overdraw to measure overdraw
+use layout inspecor on android to check the layout and hirearchy
+hirearchy viewer for xcode
+use flatlist or section list instead of other views for better performance for a large list, wont make a big difference for a small list
+going back and forth between the native and react real using the bridge will slow the app. minimize the movemement between realms to improve performance
+useNativeDriver for declarative api to handle rendering
+use tool to monitor the traffic over the bridge-snoopy
+depending on the navigating framework used, accessibility will be enabled/broken, javascript based navigation framework for android would break accessiblity
+
+
+add react library and react dom-which actually renders react to the dom
+add babel which compiles the javascript (next gen javascript)
+
+react returns jsx(almost like html looking)
+
+
+uistate management is needed if you want dynamic elements, want to modify html elements, add and remove elements.
+angular, vue and react do the same thing
+you can build a single page web application and just keep changing the components and not have to go back to the server and re load the page
+for multipage applicaions we call reactdom.render() for every component, where as for a single page app we call it once for the entire page.
+react uses a lot of next gen java script.
+use let(variables like var) and const(constants) instead of var
+const functionName = (variables if any) =>{function body} this is equal to function something(){}
+spread, rest, destructuring.
+by copying an object, you copy the pointer to that object. assigning the
+numbers, strings, booleans are primitive types. assigning one number of string to another would literally copy the first into the second one. reassigning and storing creates another copy
+object is not primitive or copied over, its a reference type. copying and reassigning the initial object does not create another object, it creates a copy of the location to that object.
+to copy the object and just the pointer (can change the object from various sources and lose track of the object)use the spread operator (...) so you can copy the original and make changes to it and not copy the pointer.
+babel- translation from modern to other levels that can get hooked into webpack-, along with webpack to compile next gen on old browsers.
+bundler -webpack helps with putting split files together,
+development server- to test app locally, web server that runs locally
+create react app tool to create react app project
+jsx makes writing code in app.js easier with easily managed html like tags and view information. If not, we could use react.createlement to keep adding element information which is not easy to handle and verbose to write.
+wrap all the tags in one root element (one div) to apply css and return to react to render
+es6 for modern java script syntax
+app.js is the file where we have one root view and add all components to it. call all components in that jsx.
+all the components live in their own folder and have their own js fiel and define what they want rendered and how. app.js can define the style, sequence and such.
+props are properties for the component. when working on the component.js, you can pass props as a parameter to the function and use the dynamic parts in the app.js when calling the component to pass any value to make the  component reusable and dynamic
+state(property) is a class variable available only when a class extends Component from react library
+
+
+=====
+const numbers = [1,2,3];
+const newNumbers = [...numbers, 4];
+console.log(newNumbers);
+
+const Person ={
+  name: 'Max'
+};
+const newPerson={
+  ...Person,
+  age: '28'
+};
+console.log(newPerson);
+======
+class Human {
+
+gender = 'Male';
+
+  printGender = () => {
+    console.log(this.gender);
+  }
+}
+class Person extends Human {
+
+
+name = 'Max';
+gender = 'Female'
+
+printMyName = () => {
+console.log(this.name);
+}
+}
+const person = new Person();
+person.printMyName();
+person.printGender();
+======
