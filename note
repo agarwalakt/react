@@ -15,7 +15,7 @@ going back and forth between the native and react real using the bridge will slo
 useNativeDriver for declarative api to handle rendering
 use tool to monitor the traffic over the bridge-snoopy
 depending on the navigating framework used, accessibility will be enabled/broken, javascript based navigation framework for android would break accessiblity
-
+export default function or export const function ->>> import function from ./class.js or import {function} from ./class.js
 
 add react library and react dom-which actually renders react to the dom
 add babel which compiles the javascript (next gen javascript)
@@ -46,6 +46,9 @@ app.js is the file where we have one root view and add all components to it. cal
 all the components live in their own folder and have their own js fiel and define what they want rendered and how. app.js can define the style, sequence and such.
 props are properties for the component. when working on the component.js, you can pass props as a parameter to the function and use the dynamic parts in the app.js when calling the component to pass any value to make the  component reusable and dynamic
 state(property) is a class variable available only when a class extends Component from react library
+useState hook for functional  components
+setState for class based components.
+useState hook does not merge state with original state like setState. instead it replaces the state with new one. have to manually add other state data.
 
 
 =====
