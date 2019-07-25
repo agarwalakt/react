@@ -49,6 +49,7 @@ state(property) is a class variable available only when a class extends Componen
 useState hook for functional  components
 setState for class based components.
 useState hook does not merge state with original state like setState. instead it replaces the state with new one. have to manually add other state data.
+two way binding. event object is available by default in javascript.
 
 
 =====
