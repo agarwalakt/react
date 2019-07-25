@@ -51,7 +51,7 @@ setState for class based components.
 useState hook does not merge state with original state like setState. instead it replaces the state with new one. have to manually add other state data.
 two way binding. event object is available by default in javascript.
 
-
+webpack -build tool lets you import css file in js file. (import .css in app.js)
 =====
 const numbers = [1,2,3];
 const newNumbers = [...numbers, 4];

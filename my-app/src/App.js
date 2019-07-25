@@ -9,7 +9,8 @@ state = {
   {name: 'Max', age: 28},
   {name: 'Manu', age: 31},
   {name: 'Stephanie', age: 32}
-]
+],
+showPersons: false
 }
 switchNameHandler = (newName) => {
   this.setState({
@@ -29,24 +30,41 @@ nameChangedHandler = (event) => {
   ]
   })
 }
-render (){
+togglePersonsHandler = () => {
+const doesShow = this.state.showPersons;
+this.setState({showPersons: !doesShow})
+}
 
+render (){
+const style = {
+  backgroundColor: 'white',
+  font: 'inherit',
+  border: '1px solid blue',
+  padding: '8px',
+  cursor: 'pointer'
+};
     return (
       // this is not an html tag, its a tag provided by react
   //className is used since its not html, and class is a reserved keyword
       <div className="App">
         <h1> Hi, I`m a React App!</h1>
         <p>This is working!</p>
-        <button onClick = {() =>{this.switchNameHandler()}}> Switch Name</button>
-        <Person
-        name={this.state.persons[0].name}
-         age={this.state.persons[0].age}
-         click={this.switchNameHandler.bind(this, 'Lilly')}
-         changed={this.nameChangedHandler}/>
-        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}> My Hobbies: Stock market trading</Person>
-        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}> My Hobbies: Stock market trading</Person>
-        <Person />
-        <Person />
+        <button
+        style={style}
+        onClick = {this.togglePersonsHandler}> Switch Name</button>
+{ this.state.showPersons ?
+  <div>
+<Person
+name={this.state.persons[0].name}
+ age={this.state.persons[0].age}
+ click={this.switchNameHandler.bind(this, 'Lilly')}
+ changed={this.nameChangedHandler}/>
+<Person name={this.state.persons[1].name} age={this.state.persons[1].age}> My Hobbies: Stock market trading</Person>
+<Person name={this.state.persons[2].name} age={this.state.persons[2].age}> My Hobbies: Stock market trading</Person>
+<Person />
+<Person />
+</div> : null}
+
       </div>
     );
 }
