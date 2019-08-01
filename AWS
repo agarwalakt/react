@@ -1,5 +1,10 @@
 AWS
 elasticity, on demand computing, availability.
+
+s3 is the storage volume bucket
+ec2 local storage
+ec2 compute power
+
 vpc(ec2 (instance), rds cache,) volume
 high availability
 elasticity
