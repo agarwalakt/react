@@ -16,3 +16,9 @@ internet gateway is like the modem which allows external internet to connect to 
 route table is like a router that helps the internet connection spread through the vpcs
 internet ->internet gateways (igw) (attached to the vpc)->router table->nacl->
 route table determines the data traffic flow
+
+subnet is a smaller network within a larger network. each region can have one or more subnets
+vpc can span multiple availability zones in a region. each region can have multiple subnets.
+subnet can be public - internet access
+subnet can be private- can talk to local other subnets and no internet access. subnet needs to be connected to a routing table without an internet gateway
+internet->(vpc (internet gateway-> routing table -> NACL-> subnet (ec2), subnet (rds)))
