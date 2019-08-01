@@ -10,3 +10,4 @@ nacl- is like a firewall
 internet gateway is like the modem which allows external internet to connect to our vpc
 route table is like a router that helps the internet connection spread through the vpcs
 internet ->internet gateways (igw) (attached to the vpc)->router table->nacl->
+route table determines the data traffic flow
