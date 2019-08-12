@@ -22,3 +22,8 @@ vpc can span multiple availability zones in a region. each region can have multi
 subnet can be public - internet access
 subnet can be private- can talk to local other subnets and no internet access. subnet needs to be connected to a routing table without an internet gateway
 internet->(vpc (internet gateway-> routing table -> NACL-> subnet (ec2), subnet (rds)))
+instance type is the cpu, determines the hardware. (vcpu, storage, memory, network...)
+ebs is the storage that comes along with the ec2 instance (can be configured)
+ebs can be associated to any ec2 as long as they are int he same availability zone.
+beter iops (input output operations per second). more the size of ebs, more iops the volume has
+root volume comes along with the ec2.
